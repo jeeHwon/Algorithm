@@ -1,2 +1,2 @@
 language = "python3"
-run = "python info/time.py"
+run = "python info/datatype.py"
