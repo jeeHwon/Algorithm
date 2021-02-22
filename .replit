@@ -1,2 +1,2 @@
 language = "python3"
-run = "python info/io_basic.py"
+run = "python info/library.py"
