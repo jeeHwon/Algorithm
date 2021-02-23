@@ -17,6 +17,7 @@ for i in range(4):
     ny = y + dy[i]
     print(nx, ny)
 
+
 # 문) 상하좌우 문제
 # (1,1)부터 R L U D
 # R L U D
@@ -40,7 +41,6 @@ plans = input().split()
 dx = [0,0,-1,1]
 dy = [1,-1,0,0]
 move_types = ['R','L','U','D']
-
 for plan in plans:
     for i in range(len(move_types)):
         if plan == move_types[i]:
@@ -51,9 +51,6 @@ for plan in plans:
     x, y = nx , ny
 print(x, y)
 
-# 문) 시각
-# 정수 N이 입력되면 00시 00분 00초부터 N시 59분 59초까지
-# 모든 시각 중 3이 하나라도 포함된 모든 경우의 수 구하기
 
 # 완전탐색문제(Brute Forcing)
 # 문) 시각 => 하루 86400초 => 1초에 2천만번 수행 범위 내
@@ -84,3 +81,64 @@ for i in range(h+1):
             if '3' in str(i) + str(j) + str(k):
                 count += 1
 print(count)
+
+
+# 문) 왕실의 나이트
+#   a b c d e f.. (8칸 x 8칸)
+# 1
+# 2
+# 3
+# 나이트가 움직일수 있는 모든 경우의 수
+# 입력예시 a1 => 출력예시 2
+s = input()
+x_type = ['a','b','c','d','e','f','g','h']
+dx = [-1,1,-2,-2,1,-1,2,2]
+dy = [-2,-2,-1,1,2,2,-1,1] 
+x = int(s[1])
+y = x_type.index(s[0]) + 1
+cnt = 0
+for i in range(8):
+    nx = x + dx[i]
+    ny = y + dy[i]
+    if 0 < nx < 9 and 0 < ny < 9:
+        cnt += 1 
+print(cnt)
+# 모답
+input_data = input()
+row = int(input_data[1])
+column = int(ord(input_data[0])) - int(ord('a')) + 1
+steps = [(-2,-1),(-1,-2),(1,-2),(2,-1),(2,1),(1,2),(-1,2),(-2,1)]
+result = 0
+for step in steps:
+    next_row = row + step[0]
+    next_column = column + step[1]
+    if next_row >= 1 and next_row <= 8 and next_column >= 1 and next_column <= 8:
+        result += 1
+print(result)
+
+
+# 문) 문자열 재정렬
+# 알파벳 대문자와 숫자로 입력 받아 알파벳 오름차순 + 숫자는 더한값 이어서 출력
+input_data = input() # 0 9 A a => 48 57 65 97
+ss = sorted(input_data)
+f = ''
+b = 0
+for s in ss:
+    if ord(s) < 65 :
+        b += int(s)
+    else:
+        f += s
+print(f+str(b)) # -> 숫자가 없는 경우 오답
+# 모답
+data = input()
+result = []
+value = 0
+for x in data:
+    if x.isalpha():
+        result.append(x)
+    else:
+        value += int(x)
+result.sort()
+if value != 0:
+    result.append(str(value))
+print(''.join(result))
