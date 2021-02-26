@@ -1,2 +1,2 @@
 language = "python3"
-run = "python dfs_bfs/test.py"
+run = "python web/test.py"
