@@ -1,0 +1,50 @@
+basic
+-- datatype: 실수형, 문자열, 리스트, 튜플, 딕셔너리, 집합
+-- function: 함수, 글로벌, 패킹, 람다
+-- grammer: 조건문, 연산자, 반복문
+-- io: 표준입력, 빠르게입력, 표준출력, f-string
+-- library: 순열, 조합, 힙, 이진탐색, 덱, 카운터, math, 내장, count
+-- time: 수행시간
+
+binary_searcy
+-- basic: "정렬되있는리스트 탐색", 값찾기, 범위속하는데이터개수 => O(logN)
+-- parametric_search: "특정조건만족하는값찾기", 최적화->결정문제, 큰 탐색범위
+
+data_structure
+-- heap: "우선순위높은데이터확인", 힙정렬, 삽입제거시에도 => O(logN)
+-- lca: "두노드의최소공통조상" => 기본:O(NM) / 개선:O(MlogN)
+-- tree: "계층적구조표현", 이진탐색트리, 트리순회
+
+dfs_bfx
+-- basic: 스택, 큐, 재귀함수, 최대공약수(유클리드 호제법)
+-- bfs: 너비우선탐색, 큐, "가까운노드우선탐색" 
+-- dfx: 깊이우선탐색, 스택(재귀호출), "현재노드방문처리,다른노드재귀방문"
+
+dynamic
+-- basic: 동적계획법, 메모리사용=>시간효율성, 메모이제이션, 피보나치, 점화식, 탑다운, 바텀업
+
+etc_algo
+-- prime_number: 소수, 에라토스테네스의 체
+-- two_pointer: "리스트순차접근" => O(N)
+
+etc_graph
+-- disjoint_sets: 서로소집합, 특정원소속한집합찾기, 신장트리, 크루스칼 => O(ElogE)
+-- topolosy_sort: 위상정렬, 사이클없는그래프방향성따른나열, 학습순서 => O(V+E)
+
+greedy
+-- basic: 최적의해보장 정당성분석
+
+implementation
+-- basic: 구현, 방향벡터, 상하좌우, 실수연산, 특정소수점, 문자열처리 => 적절 라이브러리
+
+shortest_path
+-- basic: 최소힙, 최대힙
+-- ballman_ford: "모든간선확인", 음의간선 가능, 느리지만 다익스트라 포함
+-- dijkstra: "특정노드->모든노드", 양의간선only, 노드 5000개이하
+-- floyd_warshall: "특정노드거쳐가는경우", 2차원테이블에 거리정보저장, 노드 500개 이하
+
+sorting
+-- basic: 선택정렬, 삽입정렬, 퀵정렬, 계수정렬
+
+web
+-- basic: 웹요청, REST API, json

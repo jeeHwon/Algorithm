@@ -11,7 +11,7 @@ print(sum([3,4,5]))
 print(min(3,4,5))
 print(max(3,4,5))
 # eval
-print(eval("3*(1+4)"))
+print(eval("3*(1+4)")
 
 # sorted()
 result = sorted([9,1,6,3,4])
