@@ -15,12 +15,19 @@ def out_star(n):
             if i == 1 and j == 1:
                 continue
             for k in range(tmp):
-                graph[tmp*i+k][tmp*i:tmp*(j+1)] = graph[k][:tmp]
-
-
+                graph[tmp*i+k][tmp*j:tmp*(j+1)] = graph[k][:tmp]
 
 
 N = int(input())
 
 graph = [[0 for i in range(N)] for i in range(N)]
-print(graph[0][:3])
+
+out_star(N)
+
+for i in graph:
+    for j in i:
+        if j:
+            print('*', end='')
+        else:
+            print(' ', end='')
+    print()
